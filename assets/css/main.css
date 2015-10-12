@@ -1,0 +1,360 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a, a:link, a:visited, a:active {
+  text-decoration: none;
+  color: #009444;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+   -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+   transition: all .5s ease;
+}
+
+a:hover {
+  color: #0083ff;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+}
+
+h1 {
+  margin: 0;
+  color: #fff;
+  background: #dbb706;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/** Header **/
+
+header {
+  background: url('../img/header.jpg');
+  background-size: 100%;
+  height: 250px;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+header #logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.mainMenu {
+  padding: 0 10%;
+  margin: 0;
+  list-style: none;
+  background: #fff;
+  width: 100%;
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.mainMenu > li {
+    display: inline-block;
+}
+
+.mainMenu li a {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: #0083ff;
+  border-right: 1px solid #ccc;
+  padding: 1em;
+  display: block;
+}
+
+.mainMenu li:last-child a {
+  border-right: none;
+}
+
+.mainMenu li a:hover {
+  color: #dbb706;
+  text-decoration: none;
+}
+
+.mainMenu li ul {
+  position: absolute;
+  top: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  display: none;
+  z-index: 1000;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.mainMenu li:hover > ul {
+  display: block;
+}
+
+.mainMenu li ul li {
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+
+.mainMenu li ul li a {
+  padding: .5em 1em;
+  border: none;
+  font-size: 1em;
+}
+
+.mainMenu li:hover ul a {
+  display: block;
+}
+
+/** Theme List **/
+
+.themeList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px dashed #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  position: relative;
+  height: 120px;
+}
+
+.themeList ul:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.themeList ul:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.themeList ul li {
+  float: left;
+  height: 100%;
+  width: 12.5%;
+  text-align: center;
+}
+
+.themeList ul li > div {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.themeList ul li.thumbnail img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.themeList ul li.votes {
+  position: relative;
+}
+
+.themeList ul li.votes .arrowUp, .themeList ul li.votes .arrowDown {
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+  cursor: pointer;
+  opacity: .5;
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+}
+
+.themeList ul li.votes .arrowUp {
+  top: 0;
+  background-image: url('../img/arrowUp.png');
+}
+
+.themeList ul li.votes .arrowDown {
+  bottom: 0;
+  background-image: url('../img/arrowDown.png');
+}
+
+.themeList ul li.votes .arrowUp:hover, .themeList ul li.votes .arrowDown:hover {
+  opacity: 1;
+}
+
+.themeList ul li.title {
+  width: 44%;
+  margin: 0 3%;
+  text-align: left;
+}
+
+.themeList ul li.title > a {
+  font-size: 1.1em;
+}
+
+.themeList ul li.title p {
+  font-size: .8em;
+  margin: 0;
+}
+
+.themeList ul li.date {
+  color: #777;
+  font-size: .9em;
+  line-height: 102px;
+  display: none;
+}
+
+.themeList ul li.category a {
+  color: #333;
+  font-size: .9em;
+}
+
+.themeList ul li.price {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/** Single Theme **/
+
+#theme {
+  width: 80%;
+  display: inline-block;
+  padding: 1%;
+}
+
+#sidebar {
+  width: 17%;
+  display: inline-block;
+  float: right;
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 1%;
+}
+
+/** Footer **/
+
+footer {
+  text-align: center;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  margin-top: 1em;
+  height: 100px;
+  line-height: 100px;
+  background: url('../img/header.jpg') left top;
+  background-size: 100%;
+  color: #fff;
+}
+
+/** Debug Styles **/
+
+.debug
+{
+  min-height: 20px;
+  width: 99%;
+  padding: 0.5%;
+  color: #fff;
+}
+
+.debug .array
+{
+}
+
+.debug .array:last-child
+{
+}
+
+.debug .array_content
+{
+  background: #333;
+  padding: 1em 1em 1em 2%;
+  border: 1px solid #555;
+  border-top: none;
+  margin-bottom: 1em;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+   -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+   transition: all 1s ease;
+}
+
+.debug .array .title
+{
+  padding: .5em;
+  margin: .5em 0 0 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  background: #258dc8; /* Old browsers */
+  background: -moz-linear-gradient(top, #258dc8 0%, #258dc8 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, .color-stop(0%,#258dc8), .color-stop(100%,#258dc8)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #258dc8 0%,#258dc8 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #258dc8 0%,#258dc8 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #258dc8 0%,#258dc8 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #258dc8 0%,#258dc8 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( start.colorstr='#258dc8', end.colorstr='#258dc8',GradientType=0 ); /* IE6-9 */
+}
+
+.debug .array .array_content {
+
+}
+
+.debug .array .title:hover
+{
+  cursor: pointer;
+  background: #ff730f;
+}
+
+.debug .title.compact:before
+{
+  font-size: .8em;
+  font-family: 'WebSymbolsRegular';
+  content: "+";
+  margin-right: .5em;
+}
+
+.debug .title.expanded:before
+{
+  font-size: .8em;
+  font-family: 'WebSymbolsRegular';
+  content: "-";
+  margin-right: .5em;
+}
+
+.debug .title .num_items
+{
+  font-size: .7em;
+  font-style: italic;
+}
+
+.debug .line
+{
+  padding: .3em;
+}
+
+.debug .line:hover
+{
+  background: #555;
+}
